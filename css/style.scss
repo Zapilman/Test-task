@@ -1,0 +1,121 @@
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+
+/* ------COMMMON------ */
+
+$transition: all .3s ease;
+
+section{
+	flex-basis: 25%;
+
+	border-right: 1px solid #000;
+
+	font-size: 20px;
+
+}
+
+.arrow{
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 70%;
+	width: 10px;
+	height: 10px;
+	border-right: 2px solid #000;
+	border-top: 2px solid #000;
+
+	transform: translate(-50%,-75%) rotate(135deg);
+	transition: $transition;
+}
+
+.player{
+	display: flex;
+	transition: $transition;
+
+	& section{
+		&:last-child{
+			border-right: none;
+		}
+	}
+}
+
+/* ------/COMMMON------ */
+
+.task{
+	max-width: 1200px;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	margin: 0 auto;
+
+	&__table{
+		border:1px solid #000;
+		border-radius: 5px;
+
+		width: 100%;
+
+		text-align: center;
+	}
+	&__name{
+		position: relative;
+	}
+	&__hit{
+		position: relative;
+	}
+	&__rapidity{
+		position: relative;
+	}
+
+	&__header{
+		display: flex;
+
+		& section{
+			cursor: pointer;
+			&:first-child{
+				cursor: auto;
+			}
+			&:last-child{
+				border-right: none;
+			}
+		}
+	}
+
+	&__player{
+		border-top:1px solid #000;
+
+	}
+
+	&__search{
+		max-width: 20%;
+		align-self: center;
+
+		margin-top: 40px;
+
+		.find-name{
+		padding-left: 10px;
+
+		border:1px solid #000;
+		border-radius: 5px;
+		font-size: 20px;
+
+		}
+	}
+}
